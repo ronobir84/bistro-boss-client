@@ -1,8 +1,11 @@
 import image from "../../../assets/home/featured.jpg"
 import "./Featured.css"
+
 const Featured = () => {
     
     return (
+
+        
         <div>
             <div className="mt-20">
                 <div id="main-image" className="hero min-h-screen bg-fixed">

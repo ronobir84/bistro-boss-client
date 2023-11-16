@@ -17,6 +17,14 @@ font-family: 'Cinzel', serif;
 }
 
 
+#main-image{
+    background-image: url(../src/assets/home/chef-service.jpg);
+}
+
+#menu-image{
+  background-image: url(../src/assets/menu/banner3.jpg);
+}
+
 
 
 
