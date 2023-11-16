@@ -1,10 +1,12 @@
+import Cover from "../../Shared/Cover/Cover";
 import MenuItem from "../../Shared/MenuItem/MenuItem";
 
 
-const MenuCategory = ({items}) => {
+const MenuCategory = ({ items }) => {
+    
     return (
         <div className="mt-20">
-
+            {/* {title && <Cover img={CoverImg} title="Our Menu"></Cover>} */}
             <div className="mx-auto lg:w-4/12 lg:p-0 p-7 text-center">
                 <h3 id="main-font" className="text-xl text-[#D99904] font-normal">---Don't miss---</h3>
 
@@ -16,6 +18,9 @@ const MenuCategory = ({items}) => {
                 {
                     items.map(item => <MenuItem key={item._id} item={item}></MenuItem>)
                 }
+            </div>
+            <div className='text-center'>
+                <button className="btn btn-outline px-12 border-0 border-b-4 mt-8">ORDER YOUR FAVOURITE FOOD</button>
             </div>
         </div>
     );
