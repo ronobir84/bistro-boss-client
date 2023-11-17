@@ -10,7 +10,7 @@ const Soups = ({img , title}) => {
                 strength={-200}
             >
                 <div>
-                    <div className="hero   h-[600px]">
+                    <div className="hero h-[600px]">
                         <div className="hero-overlay"></div>
                         <div className="hero-content text-center text-neutral-content">
                             <div className="max-w-4xl bg-black bg-opacity-40  lg:px-[90px] lg:py-16 ">
