@@ -1,10 +1,9 @@
 
 
-const SectionTitle = ({ heading, subHeading }) => {
+const SectionTitle = () => {
     return (
         <div>
-            <p>{subHeading}</p>
-            <h3>{heading}</h3>
+            
         </div>
     );
 };
