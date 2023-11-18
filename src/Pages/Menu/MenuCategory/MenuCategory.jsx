@@ -14,7 +14,7 @@ const MenuCategory = ({ items }) => {
                     <h1 id="main-font" className="lg:text-[40px] text-3xl text-[#151515] font-normal mt-4 lg:border-y-4 border-y-2 lg:p-2.5 p-3">TODAY'S OFFER</h1>
                 </div>
             </div>
-            <div className='grid lg:grid-cols-2 lg:mx-0 gap-10 mt-16'>
+            <div className='grid lg:grid-cols-2 lg:mx-0 gap-8 mt-16'>
                 {
                     items.map(item => <MenuItem key={item._id} item={item}></MenuItem>)
                 }

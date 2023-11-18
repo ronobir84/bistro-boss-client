@@ -3,7 +3,6 @@ import { useState } from "react";
 import { FaAlignJustify, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import icon from "../../../assets/icon/151-1511569_cart-notifications-free-shopping-cart-favicon-hd-png-removebg-preview.png"
-
 const NavBar = () => {
     const navLinks = (
         <>
@@ -12,8 +11,6 @@ const NavBar = () => {
             <li><Link className="hover:text-[#EEFF25]">DASHBOARD</Link></li>
             <li><Link to="/menu" className="hover:text-[#EEFF25]">Our Menu</Link></li>
             <li><Link to="/order" className="hover:text-[#EEFF25]">Our Shop</Link></li>
-
-            
         </>
     )
     return (
