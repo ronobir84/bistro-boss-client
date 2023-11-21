@@ -1,5 +1,6 @@
 import React from 'react';
 import MenuItem from '../../Shared/MenuItem/MenuItem';
+import { Link } from 'react-router-dom';
 
 const SoupsCateGory = ({items}) => {
     return (
@@ -12,7 +13,9 @@ const SoupsCateGory = ({items}) => {
                 }
             </div>
             <div className='text-center'>
-                <button className="btn btn-outline px-10 border-0 border-b-4 mt-8">ORDER YOUR FAVOURITE FOOD</button>
+                <Link to="/order">
+                    <button className="btn btn-outline px-10 border-0 border-b-4 mt-8">ORDER YOUR FAVOURITE FOOD</button>
+                </Link>
             </div>
         </div>
     );

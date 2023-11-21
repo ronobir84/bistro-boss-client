@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
 import MenuItem from "../../Shared/MenuItem/MenuItem";
 
 
-const SaladsCategory = ({items}) => {
+const SaladsCategory = ({ items, title }) => {
+    console.log(title)
     return (
         <div className="mt-20">
 
@@ -12,7 +14,9 @@ const SaladsCategory = ({items}) => {
                 }
             </div>
             <div className='text-center'>
-                <button className="btn btn-outline px-10 border-0 border-b-4 mt-8">ORDER YOUR FAVOURITE FOOD</button>
+                <Link to="/order">
+                    <button className="btn btn-outline px-10 border-0 border-b-4 mt-8">ORDER YOUR FAVOURITE FOOD</button>
+                </Link>
             </div>
         </div>
     );

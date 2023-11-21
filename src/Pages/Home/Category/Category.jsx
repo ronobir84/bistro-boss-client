@@ -19,7 +19,7 @@ import img6 from "../../../assets/home/slide2.jpg"
 import img7 from "../../../assets/home/slide4.jpg"
 import img8 from "../../../assets/home/slide1.jpg"
 import Category2 from './Category2/Category2';
-import SectionTitle from '../../../Components/SectionTitle/SectionTitle';
+
 
 
 const Category = () => {
@@ -79,7 +79,7 @@ const Category = () => {
                     </SwiperSlide>
                     <SwiperSlide>
                         <img src={img8} alt="" />
-                        <h2 id='style-font' className='text-3xl text-center text-white -mt-16 uppercase'>Salads</h2>
+                        <h2 id='style-font' className='text-3xl text-center  -mt-16 uppercase'>Salads</h2>
                     </SwiperSlide>
                     <SwiperSlide>
                         <img src={img3} alt="" />

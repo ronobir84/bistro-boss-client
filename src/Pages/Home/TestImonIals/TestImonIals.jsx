@@ -24,17 +24,13 @@ const TestImonIals = () => {
             <div>
 
 
-                <div className="mx-auto lg:w-4/12 lg:p-0 p-7  text-center mt-10 ">
+                <div className="mx-auto lg:w-4/12 lg:p-0 p-7  text-center mt-10">
                     <h3 id="main-font" className="text-xl text-[#D99904] font-normal">---What Our Clients Say---</h3>
 
                     <div className="">
                         <h1 id="main-font" className="lg:text-[40px] text-3xl text-[#151515] font-normal mt-4 lg:border-y-4 border-y-2 lg:p-2.5 p-3">TESTIMONIALS</h1>
                     </div>
                 </div>
-
-
-
-
                 <div>
                     <Swiper
                         cssMode={true}

@@ -48,10 +48,10 @@ const Menu = () => {
             <div className='lg:mx-36'>
                 <SaladsCategory items={salad}></SaladsCategory>
             </div>
-            {/* Soups menu item  */} 
+            {/* Soups menu item  */}
             <Soups img={soupsImg} title="Soups"></Soups>
             <div className='lg:mx-36'>
-<SoupsCateGory items={soup}></SoupsCateGory>
+                <SoupsCateGory items={soup}></SoupsCateGory>
             </div>
         </div>
     );

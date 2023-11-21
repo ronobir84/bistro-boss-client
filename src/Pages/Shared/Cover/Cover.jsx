@@ -41,7 +41,7 @@ const Cover = ({ img, title }) => {
         strength={-200}
     >
             <div>
-                <div className="hero  lg:min-h-screen lg:h-0 h-[700px]">
+                <div className="hero  min-h-screen ">
                     <div className="hero-overlay"></div>
                     <div className="hero-content text-center text-neutral-content">
                         <div className="max-w-4xl bg-black bg-opacity-40  lg:px-[250px] px-[90px] py-8 lg:py-16 ">
