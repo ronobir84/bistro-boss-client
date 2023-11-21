@@ -12,7 +12,7 @@ const FoodCard = ({ item }) => {
                     
                     <p className='text-sm'>{recipe}</p>
                     <p className=" text-[#BB8506] font-bold"><span className="text-[#1F2937]">Price:</span> $ {price}</p>
-                    <button className='text-[#BB8506] text-lg border-[#BB8506] border-b-4 hover:bg-[#1F2937] px-6 py-2 rounded-md '> add to cart</button>
+                    <button className='text-[#BB8506] text-lg border-[#BB8506] bg-[#E8E8E8] border-b-4 hover:bg-[#1F2937] px-6 py-2 rounded-md '> add to cart</button>
                 </div>
             </div>
         </div>

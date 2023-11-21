@@ -15,7 +15,7 @@ const TestImonIals = () => {
     const [reviews, setReviews] = useState([])
 
     useEffect(() => {
-        fetch('reviews.json')
+        fetch('http://localhost:5000/reviews')
             .then(response => response.json())
             .then(data => setReviews(data))
     }, [])
@@ -41,7 +41,7 @@ const TestImonIals = () => {
                         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
                         className="mySwiper"
                     >
-                        
+
                         {
                             reviews.map(review => <SwiperSlide key={review._id}>
                                 <div className='lg:m-24 m-10 lg:space-y-0 space-y-4'>

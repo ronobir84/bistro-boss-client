@@ -7,7 +7,7 @@ const NavBar = () => {
     const navLinks = (
         <>
             <li><Link to="/" className="hover:text-[#EEFF25]">Home</Link></li>
-            <li><Link className="hover:text-[#EEFF25]">CONTACT us</Link></li>
+            <li><Link to="/contact" className="hover:text-[#EEFF25]">CONTACT us</Link></li>
             <li><Link className="hover:text-[#EEFF25]">DASHBOARD</Link></li>
             <li><Link to="/menu" className="hover:text-[#EEFF25]">Our Menu</Link></li>
             <li><Link to="/order" className="hover:text-[#EEFF25]">Our Shop</Link></li>
