@@ -74,7 +74,7 @@ const ContactFrom = () => {
                         </div>
                     </div>
                 </form>
-                
+
 
 
             </div>

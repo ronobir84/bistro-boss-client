@@ -25,6 +25,13 @@ font-family: 'Cinzel', serif;
 }
 
 
+#main-login{
+  background-image: url('./assets/others/authentication.png');
+}
+#back-img{
+  background-image: url('./assets/others/authentication.png');
+}
+
 
 
 
