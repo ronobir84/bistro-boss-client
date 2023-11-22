@@ -50,40 +50,40 @@ const Category = () => {
                 >
                     <SwiperSlide className='rounded-md'>
                         <img src={img1} alt="" />
-                        <h2 id='style-font' className='text-3xl text-center text-white  uppercase'>Salads</h2>
+                        
                     </SwiperSlide>
                     <SwiperSlide>
                         <img src={img2} alt="" />
-                        <h2 id='style-font' className='text-3xl text-center text-white -mt-16 uppercase'>pizzas</h2>
+                        
 
                     </SwiperSlide>
                     <SwiperSlide>
                         <img src={img3} alt="" />
-                        <h2 id='style-font' className='text-3xl text-center text-white -mt-16 uppercase'>Soups</h2>
+                        
                     </SwiperSlide>
                     <SwiperSlide>
                         <img src={img4} alt="" />
-                        <h2 id='style-font' className='text-3xl text-center text-white -mt-16 uppercase'>desserts</h2>
+                       
                     </SwiperSlide>
                     <SwiperSlide>
                         <img src={img5} alt="" />
-                        <h2 id='style-font' className='text-3xl text-center text-white -mt-12 uppercase'>Salads</h2>
+                        
                     </SwiperSlide>
                     <SwiperSlide>
                         <img src={img6} alt="" />
-                        <h2 id='style-font' className='text-3xl text-center text-white -mt-16 uppercase'>pizzas</h2>
+                        
                     </SwiperSlide>
                     <SwiperSlide>
                         <img src={img7} alt="" />
-                        <h2 id='style-font' className='text-3xl text-center text-white -mt-16 uppercase'>desserts</h2>
+                        
                     </SwiperSlide>
                     <SwiperSlide>
                         <img src={img8} alt="" />
-                        <h2 id='style-font' className='text-3xl text-center  -mt-16 uppercase'>Salads</h2>
+                       
                     </SwiperSlide>
                     <SwiperSlide>
                         <img src={img3} alt="" />
-                        <h2 id='style-font' className='text-3xl text-center text-white -mt-16 uppercase'>Soups</h2>
+                        
                     </SwiperSlide>
                 </Swiper>
             </div>
