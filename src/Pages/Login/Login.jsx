@@ -1,12 +1,17 @@
 
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import loginImg from "../../assets/others/authentication2.png"
 import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
 import { FaFacebookF, FaGoogle, FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+import { AuthContext } from "../../Providers/AuthProvider";
 const Login = () => {
     const captchaRef = useRef(null)
     const [disabled, setDisable] = useState(true)
+
+    const { signIn } = useContext(AuthContext)
+
     useEffect(() => {
         loadCaptchaEnginge(6);
     }, [])
@@ -16,6 +21,11 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
         console.log(email, password)
+        signIn(email, password)
+            .then(result => {
+                const user = result.user
+                console.log(user)
+            })
     }
     const handleValidateCaptcha = () => {
         const user_captcha_value = captchaRef.current.value
@@ -28,6 +38,9 @@ const Login = () => {
     }
     return (
         <div>
+            <Helmet>
+                <title>Login</title>
+            </Helmet>
             <div id="main-login" className="hero  min-h-screen mx-auto ">
                 <div id="back-img" className="hero-content m-16 flex flex-shrink-0 shadow-2xl ">
                     <div className="">
