@@ -6,6 +6,7 @@ import { FaFacebookF, FaGoogle, FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { AuthContext } from "../../Providers/AuthProvider";
+import Swal from 'sweetalert2'
 const Login = () => {
     const captchaRef = useRef(null)
     const [disabled, setDisable] = useState(true)
@@ -25,6 +26,23 @@ const Login = () => {
             .then(result => {
                 const user = result.user
                 console.log(user)
+                Swal.fire({
+                    title: "Custom animation with Animate.css",
+                    showClass: {
+                        popup: `
+      animate__animated
+      animate__fadeInUp
+      animate__faster
+    `
+                    },
+                    hideClass: {
+                        popup: `
+      animate__animated
+      animate__fadeOutDown
+      animate__faster
+    `
+                    }
+                });
             })
     }
     const handleValidateCaptcha = () => {
@@ -49,11 +67,11 @@ const Login = () => {
                     </div>
 
                     <div className="card w-full  max-w-lg  ">
-                        <h2 className="text-4xl font-bold text-black text-center mt-8">Login</h2>
+                        <h2 id="style-font" className="text-4xl font-bold text-black text-center mt-8">Login</h2>
                         <form onSubmit={handelLogin} className="card-body">
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text text-xl">Email</span>
+                                    <span id="style-font" className="label-text text-xl">Email</span>
                                 </label>
                                 <input type="email" name="email" placeholder="Type here" className="input input-bordered" required />
                             </div>
@@ -61,7 +79,7 @@ const Login = () => {
 
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text text-xl">Password</span>
+                                    <span id="style-font" className="label-text text-xl">Password</span>
                                 </label>
                                 <input type="password" name="password" placeholder="Enter your password" className="input input-bordered" required />
 
@@ -69,7 +87,7 @@ const Login = () => {
 
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text text-[#5D5FEF] text-xl">Reload Captcha</span>
+                                    <span id="style-font" className="label-text text-[#5D5FEF] text-xl">Reload Captcha</span>
                                 </label>
                                 <input type="text" ref={captchaRef} name="captcha" placeholder="Type here" className="input input-bordered" />
                             </div>
@@ -91,7 +109,7 @@ const Login = () => {
 
                             <div className="form-control mt-6">
 
-                                <input disabled={disabled} className="btn btn-info py-3 text-xl " type="submit" value="Login" />
+                                <input id="style-font" disabled={disabled} className="btn btn-info py-3 text-xl cursor-pointer" type="submit" value="Login" />
                             </div>
                         </form>
                         <Link><h2 className="text-xl text-center text-[#D1A054]">New here? Create a New Account</h2></Link>
