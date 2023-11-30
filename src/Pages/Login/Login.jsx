@@ -1,18 +1,21 @@
 
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import loginImg from "../../assets/others/authentication2.png"
 import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
 import { FaFacebookF, FaGoogle, FaGithub } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from 'sweetalert2'
 const Login = () => {
-    const captchaRef = useRef(null)
+
     const [disabled, setDisable] = useState(true)
 
     const { signIn } = useContext(AuthContext)
+    const navigate = useNavigate()
+    const location = useLocation()
 
+    const from = location.state?.from?.pathname || "/";
     useEffect(() => {
         loadCaptchaEnginge(6);
     }, [])
@@ -27,7 +30,7 @@ const Login = () => {
                 const user = result.user
                 console.log(user)
                 Swal.fire({
-                    title: "Custom animation with Animate.css",
+                    title: "User Login Successful",
                     showClass: {
                         popup: `
       animate__animated
@@ -42,11 +45,12 @@ const Login = () => {
       animate__faster
     `
                     }
-                });
+                }); 
+                navigate(from, { replace: true });
             })
     }
-    const handleValidateCaptcha = () => {
-        const user_captcha_value = captchaRef.current.value
+    const handleValidateCaptcha = (e) => {
+        const user_captcha_value = e.target.value
         if (validateCaptcha(user_captcha_value)) {
             setDisable(false)
         }
@@ -89,7 +93,7 @@ const Login = () => {
                                 <label className="label">
                                     <span id="style-font" className="label-text text-[#5D5FEF] text-xl">Reload Captcha</span>
                                 </label>
-                                <input type="text" ref={captchaRef} name="captcha" placeholder="Type here" className="input input-bordered" />
+                                <input type="text" onBlur={handleValidateCaptcha} name="captcha" placeholder="Type here" className="input input-bordered" />
                             </div>
 
                             <div className="form-control flex">
@@ -100,7 +104,7 @@ const Login = () => {
                                         </label>
                                     </div>
                                     <div>
-                                        <button onClick={handleValidateCaptcha} className="btn btn-sm  mt-3 btn-info">Validate</button>
+                                        
 
                                     </div>
                                 </div>

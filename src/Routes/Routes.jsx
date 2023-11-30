@@ -1,6 +1,6 @@
 import {
     createBrowserRouter,
-    
+
 } from "react-router-dom";
 import Main from "../LayOut/Main";
 import Home from "../Pages/Home/Home/Home";
@@ -9,6 +9,8 @@ import Order from "../Pages/Order/Order/Order";
 import ContactHome from "../Pages/Contact/ContactHome/ContactHome";
 import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
+import PrivateRoute from "./PrivateRoute";
+import Secret from "../Pages/Shared/Secret/Secret";
 
 
 export const router = createBrowserRouter([
@@ -18,27 +20,31 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: "/",
-                element : <Home></Home>
+                element: <Home></Home>
             },
             {
                 path: "/menu",
-                element : <Menu></Menu>
+                element: <Menu></Menu>
             },
             {
                 path: "/order",
-                element : <Order></Order>
+                element: <Order></Order>
             },
             {
                 path: "/contact",
-                element : <ContactHome></ContactHome>
+                element: <ContactHome></ContactHome>
             },
             {
                 path: "/login",
-                element : <Login></Login>
+                element: <Login></Login>
             },
             {
                 path: "/signUp",
-                element : <SignUp></SignUp>
+                element: <SignUp></SignUp>
+            },
+            {
+                path: "/secret",
+                element: <PrivateRoute><Secret></Secret></PrivateRoute>
             }
         ]
     },

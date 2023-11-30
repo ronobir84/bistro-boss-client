@@ -7,7 +7,7 @@ const Footer = () => {
 
             <div className="lg:flex">
                 <div>
-                    <div className="bg-[#1F2937] lg:w-[800px] lg:h-[300px] text-white text-center lg:p-0 p-8 lg:pt-20 space-y-2">
+                    <div className="bg-[#1F2937] lg:w-[900px] lg:h-[300px] text-white text-center lg:p-0 p-8 lg:pt-20 space-y-2">
                         <h2 className="text-3xl">CONTACT US</h2>
                         <p>123 ABS Street, Uni 21, Bangladesh</p>
                         <p>+88 123456789</p>
@@ -15,7 +15,7 @@ const Footer = () => {
                         <h3>Sat - Sun: 10:00 - 23:00</h3>
                     </div>
                 </div>
-                <div className="lg:w-[800px] lg:h-[300px] bg-[#111827] text-white text-center lg-p-0 p-6 lg:pt-20 ">
+                <div className="lg:w-[900px] lg:h-[300px] bg-[#111827] text-white text-center lg-p-0 p-6 lg:pt-20 ">
                     <div className="space-y-4">
                         <h2 className="text-3xl">Follow US</h2>
                         <p>Join us on social media</p>
