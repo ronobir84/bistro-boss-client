@@ -4,8 +4,10 @@ import { FaAlignJustify, FaTimes, FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import icon from "../../../assets/icon/151-1511569_cart-notifications-free-shopping-cart-favicon-hd-png-removebg-preview.png"
 import { AuthContext } from "../../../Providers/AuthProvider";
+import UseCart from "../../../Hooks/UseCart";
 const NavBar = () => {
     const { user, logOut } = useContext(AuthContext);
+    const [cart] = UseCart()
     const handelLogOut = () => {
         logOut()
             .then(() => { })
@@ -63,7 +65,7 @@ const NavBar = () => {
                             <Link to="/">
                                 <button className="flex border p-2">
                                     <FaShoppingCart className="text-3xl"></FaShoppingCart>
-                                    <div className="badge badge-secondary mt-1">+0</div>
+                                <div className="badge badge-secondary mt-1">+{ cart.length}</div>
                                 </button>
 
                             </Link>
