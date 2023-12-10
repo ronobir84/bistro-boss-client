@@ -8,7 +8,7 @@ const Featured = () => {
         
         <div>
             <div className="mt-20">
-                <div id="main-image" className="hero min-h-screen bg-fixed">
+                <div id="main-image" className="hero min-h-screen bg-fixed"> 
                     <div className="hero-overlay bg-opacity-60">
 
                         <div className="mx-auto lg:w-4/12 lg:p-0 p-7  text-center mt-10 ">

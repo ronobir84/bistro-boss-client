@@ -62,7 +62,7 @@ const NavBar = () => {
                     <div className="flex  lg:pl-80 gap-6 ">
                         
                         
-                            <Link to="/">
+                            <Link to="/dashboard/cart">
                                 <button className="flex border p-2">
                                     <FaShoppingCart className="text-3xl"></FaShoppingCart>
                                 <div className="badge badge-secondary mt-1">+{ cart.length}</div>

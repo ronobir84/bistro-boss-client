@@ -2,6 +2,7 @@ import Swal from "sweetalert2";
 import UseAuth from "../../Hooks/UseAuth";
 import { useLocation, useNavigate } from "react-router-dom";
 import UseAxiosSecure from "../../Hooks/UseAxiosSecure";
+import UseCart from "../../Hooks/UseCart";
 
 
 const FoodCard = ({ item }) => {
@@ -10,10 +11,10 @@ const FoodCard = ({ item }) => {
     const navigate = useNavigate()
     const location = useLocation()
     const axiosSecure = UseAxiosSecure()
-    const handelAddToCard = food => {
+    const [, refetch]= UseCart();
+    const handelAddToCard = () => {
         if (user && user.email) {
-            // ToDo: sent card item to the database
-            console.log(user.email, food)
+            // sent card item to the database
             const cardItem = {
                 menuId: _id,
                 email: user.email,
@@ -33,6 +34,8 @@ const FoodCard = ({ item }) => {
                             showConfirmButton: false,
                             timer: 1500
                         });
+                        //refetch thr cart to update the cart items count
+                        refetch() 
                     }
             })
 
@@ -66,7 +69,7 @@ const FoodCard = ({ item }) => {
                     
                     <p className='text-sm'>{recipe}</p>
                     <p className=" text-[#BB8506] font-bold"><span className="text-[#1F2937]">Price:</span> $ {price}</p>
-                    <button onClick={() => handelAddToCard(item)} className='text-[#BB8506] text-lg border-[#BB8506] bg-[#E8E8E8] border-b-4 hover:bg-[#1F2937] px-6 py-2 rounded-md '> add to cart</button>
+                    <button onClick={ handelAddToCard} className='text-[#BB8506] text-lg border-[#BB8506] bg-[#E8E8E8] border-b-4 hover:bg-[#1F2937] px-6 py-2 rounded-md '> add to cart</button>
                 </div>
             </div>
         </div>
