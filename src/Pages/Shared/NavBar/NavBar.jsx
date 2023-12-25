@@ -39,17 +39,17 @@ const NavBar = () => {
             <div className="navbar fixed z-10 bg-opacity-30  bg-black text-white">
                 <div className="">
                     <div className="dropdown">
-                        <label tabIndex={0} className="btn btn-ghost lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                        </label>
+                        <button className="btn btn-square btn-ghost">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block lg:hidden  w-10 h-10 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                        </button>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-black bg-opacity-30 hover:text-[#EEFF25] rounded-box w-52">
                             {navLinks}
                         </ul>
                     </div>
-                    <div id="style-font" className="cursor-pointer items-center text lg:pl-12 pl-40  ">
+                    <div id="style-font" className="cursor-pointer items-center text lg:pl-12 pl-20  ">
 
-                        <h2 className="text-2xl ">BISTRO BOSS</h2>
-                        <h4 className="text-xl ">R <span>E</span> <span>S</span> <span>T</span> <span>A</span> <span>U</span> <span>R</span> <span>A</span> <span>N</span> <span>T</span></h4>
+                        <h2 className="lg:text-2xl text-xl">BISTRO BOSS</h2>
+                        <h4 className="lg:text-xl text-base">R <span>E</span> <span>S</span> <span>T</span> <span>A</span> <span>U</span> <span>R</span> <span>A</span> <span>N</span> <span>T</span></h4>
                     </div>
                 </div>
 
@@ -58,12 +58,12 @@ const NavBar = () => {
                         {navLinks}
                     </ul>
                 </div>
-                <div className="hidden lg:block">
-                    <div className="flex  lg:pl-80 gap-6 ">
+                <div className="">
+                    <div className="flex  lg:pl-80 p gap-6 ">
                         
                         
-                            <Link to="/dashboard/cart">
-                                <button className="flex border p-2">
+                            <Link className="lg:pl-0 pl-4" to="/dashboard/cart">
+                                <button className="flex  p-2  ">
                                     <FaShoppingCart className="text-3xl"></FaShoppingCart>
                                 <div className="badge badge-secondary mt-1">+{ cart.length}</div>
                                 </button>
@@ -72,7 +72,7 @@ const NavBar = () => {
                             
                         
 
-                        <div className="relative cursor-pointer w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
+                        <div className="relative hidden lg:block cursor-pointer w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
                             <svg className="absolute w-12 h-12 text-gray-400 -left-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
                         </div>
 

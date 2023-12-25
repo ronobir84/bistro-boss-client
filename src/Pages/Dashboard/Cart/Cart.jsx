@@ -1,8 +1,12 @@
+import UseCart from "../../../Hooks/UseCart";
 
 const Cart = () => {
+    const [cart] = UseCart();
     return (
         <div>
-            <h2 className="text-5xl"> My Cart</h2>
+            <div>
+                <h2 className="text-5xl"> My Cart</h2>
+            </div>
         </div>
     );
 };
