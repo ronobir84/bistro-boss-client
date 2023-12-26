@@ -1,11 +1,11 @@
-import { FaBars, FaCalendarAlt, FaCalendarCheck,  FaHome, FaRegEnvelope, FaShoppingBag, FaShoppingCart } from "react-icons/fa";
+import { FaBars, FaCalendarAlt, FaCalendarCheck,  FaEnvelope,  FaHome,   FaShoppingBag, FaShoppingCart } from "react-icons/fa";
 import { NavLink, Outlet } from "react-router-dom";
 
 const Dashboard = () => {
     return (
-        <div className="flex gap-11">
+        <div className="flex gap-11 block">
             {/* dashboard side bar */}
-            <div className="w-80 min-h-screen bg-[#D1A054]">
+            <div className="w-80 min-h-screen bg-[#D1A054] fixed ">
                 <div id="style-font" className="cursor-pointer pl-12 pt-10">
 
                     <h2 className="lg:text-3xl text-xl font-bold">BISTRO BOSS</h2>
@@ -58,7 +58,7 @@ const Dashboard = () => {
                     </li>
                     <li>
                         <NavLink to="/contact">
-                            <FaRegEnvelope className="text-2xl"></FaRegEnvelope>
+                            <FaEnvelope className="text-2xl"></FaEnvelope>
                             <span id="style-font" className="text-2xl uppercase">Contact</span>
                         </NavLink>
                     </li>
@@ -67,7 +67,7 @@ const Dashboard = () => {
                 
             </div>
             {/* dashboard content */}
-            <div className="flex-1 p-16">
+            <div className="flex-1 p-16 relative left-80">
                 <Outlet></Outlet>
             </div>
         </div>
