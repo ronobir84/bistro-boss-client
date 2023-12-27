@@ -1,9 +1,11 @@
 import { FaBars, FaCalendarAlt, FaCalendarCheck,  FaEnvelope,  FaHome,   FaShoppingBag, FaShoppingCart } from "react-icons/fa";
 import { NavLink, Outlet } from "react-router-dom";
+import UseCart from "../Hooks/UseCart";
 
 const Dashboard = () => {
+    const [cart] = UseCart()
     return (
-        <div className="flex gap-11 block">
+        <div className="flex gap-11 ">
             {/* dashboard side bar */}
             <div className="w-80 min-h-screen bg-[#D1A054] fixed ">
                 <div id="style-font" className="cursor-pointer pl-12 pt-10">
@@ -27,11 +29,11 @@ const Dashboard = () => {
                     <li>
                         <NavLink to="dashboard/cart">
                             <FaShoppingCart className="text-2xl"></FaShoppingCart>
-                            <span id="style-font" className="text-2xl uppercase">My Cart</span>
+                            <span id="style-font" className="text-2xl uppercase">My Cart ({ cart.length})</span>
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="dashboard/bookings">
+                         <NavLink to="dashboard/bookings">
                             <FaCalendarCheck className="text-2xl"></FaCalendarCheck>
                             <span id="style-font" className="text-2xl uppercase">my booking</span>
                         </NavLink>
